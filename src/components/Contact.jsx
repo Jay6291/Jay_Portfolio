@@ -18,17 +18,18 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "YOUR_SERVICE_ID", // replace
-        "YOUR_TEMPLATE_ID", // replace
+        "service_xihril7",
+        "template_42qpu7n",
         form.current,
-        "YOUR_PUBLIC_KEY", // replace
+        "rUmZFDXbrrMN542Gl",
       )
       .then(
-        (result) => {
+        () => {
           alert("Message Sent Successfully ✅");
           form.current.reset();
         },
         (error) => {
+          console.log(error);
           alert("Message Failed ❌ Try Again!");
         },
       );
@@ -49,12 +50,14 @@ const Contact = () => {
           <p className="text-sm tracking-widest text-gray-400 uppercase">
             Let’s Connect
           </p>
+
           <h2 className="text-4xl md:text-5xl font-extrabold mt-3">
             Contact{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
               Me
             </span>
           </h2>
+
           <p className="text-gray-400 mt-5 max-w-2xl mx-auto text-lg">
             Have a project or want to collaborate? Feel free to connect with me.
             I’m always open to new opportunities.
@@ -79,8 +82,10 @@ const Contact = () => {
               <div className="p-4 rounded-xl bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-white/10">
                 <FaEnvelope className="text-2xl text-blue-400" />
               </div>
+
               <div>
                 <p className="text-gray-300 text-sm">Email</p>
+
                 <p className="font-semibold text-white">
                   jaykamal63947@gmail.com
                 </p>
@@ -92,8 +97,10 @@ const Contact = () => {
               <div className="p-4 rounded-xl bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-white/10">
                 <FaPhoneAlt className="text-2xl text-purple-400" />
               </div>
+
               <div>
                 <p className="text-gray-300 text-sm">Phone</p>
+
                 <p className="font-semibold text-white">+91 6394715954</p>
               </div>
             </div>
@@ -103,8 +110,10 @@ const Contact = () => {
               <div className="p-4 rounded-xl bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-white/10">
                 <FaMapMarkerAlt className="text-2xl text-blue-400" />
               </div>
+
               <div>
                 <p className="text-gray-300 text-sm">Location</p>
+
                 <p className="font-semibold text-white">Kanpur, India</p>
               </div>
             </div>
@@ -124,13 +133,16 @@ const Contact = () => {
               >
                 <div className="flex items-center gap-4">
                   <FaLinkedin className="text-3xl text-blue-400" />
+
                   <div>
                     <p className="font-semibold text-white">LinkedIn</p>
+
                     <p className="text-sm text-gray-400">
                       Professional Profile
                     </p>
                   </div>
                 </div>
+
                 <span className="text-gray-400 text-sm">Visit →</span>
               </a>
 
@@ -143,11 +155,14 @@ const Contact = () => {
               >
                 <div className="flex items-center gap-4">
                   <FaInstagram className="text-3xl text-pink-400" />
+
                   <div>
                     <p className="font-semibold text-white">Instagram</p>
+
                     <p className="text-sm text-gray-400">Personal Updates</p>
                   </div>
                 </div>
+
                 <span className="text-gray-400 text-sm">Visit →</span>
               </a>
 
@@ -160,23 +175,27 @@ const Contact = () => {
               >
                 <div className="flex items-center gap-4">
                   <FaGithub className="text-3xl text-gray-200" />
+
                   <div>
                     <p className="font-semibold text-white">GitHub</p>
+
                     <p className="text-sm text-gray-400">Projects & Code</p>
                   </div>
                 </div>
+
                 <span className="text-gray-400 text-sm">Visit →</span>
               </a>
             </div>
 
             {/* WhatsApp Button */}
             <a
-              href="https://wa.me/639471594"
+              href="https://wa.me/916394715954?text=Hello%20Jay%2C%20I%20want%20to%20connect%20with%20you"
               target="_blank"
               rel="noreferrer"
               className="mt-8 flex items-center justify-center gap-3 w-full py-3 rounded-xl font-semibold text-white bg-green-600 hover:bg-green-700 transition duration-300"
             >
-              <FaWhatsapp className="text-2xl" /> Chat on WhatsApp
+              <FaWhatsapp className="text-2xl" />
+              Chat on WhatsApp
             </a>
           </div>
 
@@ -189,6 +208,7 @@ const Contact = () => {
             <form ref={form} onSubmit={sendEmail} className="space-y-5">
               <div>
                 <label className="text-sm text-gray-300">Your Name</label>
+
                 <input
                   type="text"
                   name="user_name"
@@ -200,6 +220,7 @@ const Contact = () => {
 
               <div>
                 <label className="text-sm text-gray-300">Your Email</label>
+
                 <input
                   type="email"
                   name="user_email"
@@ -211,6 +232,7 @@ const Contact = () => {
 
               <div>
                 <label className="text-sm text-gray-300">Message</label>
+
                 <textarea
                   rows="5"
                   name="message"

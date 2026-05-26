@@ -10,9 +10,10 @@ import ProjectsPage from "./pages/ProjectsPage";
 import ContactPage from "./pages/ContactPage";
 import SkillsPage from "./pages/SkillsPage";
 import ExperiencePage from "./pages/ExperiencePage";
+
 function App() {
   return (
-    <Router>
+    <Router basename="/Jay_Portfolio">
       <Navbar />
 
       <Routes>
